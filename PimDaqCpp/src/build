@@ -1,0 +1,3 @@
+#!/bin/sh
+pasm -b ledButton.p
+g++ -O3 ledButton.c -static -o ledButton -lpthread -lprussdrv
