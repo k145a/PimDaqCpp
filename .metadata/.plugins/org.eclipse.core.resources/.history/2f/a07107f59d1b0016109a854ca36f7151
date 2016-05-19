@@ -1,0 +1,15 @@
+//============================================================================
+// Name        : PimDaqCpp.cpp
+// Author      : RKALIS
+// Version     :
+// Copyright   : FlowMD
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	cout << "HEllow from PimDaqCpp May 16, 2016" << endl; // prints HEllow from PimDaqCpp May 16, 2016
+	return 0;
+}

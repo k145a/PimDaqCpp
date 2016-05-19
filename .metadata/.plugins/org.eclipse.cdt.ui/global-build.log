@@ -1,0 +1,47 @@
+11:48:52 **** Incremental Build of configuration Debug for project PimDaqCpp ****
+make all 
+Building target: PimDaqCpp
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++ -L/home/user1/git/pru-software-support-package/lib/src/rpmsg_lib -L/lib/arm-linux-gnueabihf -L/home/user1/git/pru-software-support-package/lib -o "PimDaqCpp"  ./src/PimDaqCpp.o ./src/ledButton.o   
+./src/ledButton.o: In function `main':
+/home/user1/workspace/PimDaqCpp/Debug/../src/ledButton.cpp:54: undefined reference to `prussdrv_init'
+makefile:45: recipe for target 'PimDaqCpp' failed
+/home/user1/workspace/PimDaqCpp/Debug/../src/ledButton.cpp:55: undefined reference to `prussdrv_open'
+/home/user1/workspace/PimDaqCpp/Debug/../src/ledButton.cpp:58: undefined reference to `prussdrv_pruintc_init'
+/home/user1/workspace/PimDaqCpp/Debug/../src/ledButton.cpp:61: undefined reference to `prussdrv_exec_program'
+/home/user1/workspace/PimDaqCpp/Debug/../src/ledButton.cpp:64: undefined reference to `prussdrv_pru_wait_event'
+/home/user1/workspace/PimDaqCpp/Debug/../src/ledButton.cpp:68: undefined reference to `prussdrv_pru_disable'
+/home/user1/workspace/PimDaqCpp/Debug/../src/ledButton.cpp:69: undefined reference to `prussdrv_exit'
+collect2: error: ld returned 1 exit status
+make: *** [PimDaqCpp] Error 1
+11:53:39 **** Clean-only build of configuration Debug for project PimDaqCpp ****
+make clean 
+rm -rf  ./src/PimDaqCpp.o ./src/ledButton.o  ./src/PimDaqCpp.d ./src/ledButton.d  PimDaqCpp
+ 
+11:53:42 **** Incremental Build of configuration Debug for project PimDaqCpp ****
+make all 
+Building file: ../src/PimDaqCpp.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -I/usr/include -I"/home/user1/git/prussdrv" -I/usr/bin -I/home/user1/git/pru-software-support-package/include -I/home/user1/git/am335x_pru_package/pru_sw/app_loader/include -I/home/user1/git/pru-software-support-package/include/am335x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PimDaqCpp.d" -MT"src/PimDaqCpp.o" -o "src/PimDaqCpp.o" "../src/PimDaqCpp.cpp"
+../src/PimDaqCpp.cpp: In function ‘int main()’:
+../src/PimDaqCpp.cpp:17:14: warning: unused variable ‘now’ [-Wunused-variable]
+  struct tm * now = localtime(& t);
+              ^
+Finished building: ../src/PimDaqCpp.cpp
+ 
+Building target: PimDaqCpp
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++ -L/home/user1/git/pru-software-support-package/lib/src/rpmsg_lib -L/lib/arm-linux-gnueabihf -L/home/user1/git/pru-software-support-package/lib -o "PimDaqCpp"  ./src/PimDaqCpp.o   
+Finished building target: PimDaqCpp
+ 
+make --no-print-directory post-build
+scp PimDaqCpp debian@192.168.7.2:/home/debian/
+Debian GNU/Linux 7
+
+BeagleBoard.org Debian Image 2015-11-12
+
+Support/FAQ: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 

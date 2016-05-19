@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;PimDaqCpp/src/ledButton.c&apos; to &apos;ledButton.cpp&apos;" description="Rename resource &apos;ledButton.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ledButton.c" name="ledButton.cpp" stamp="1463600743356" updateReferences="true"/>
+</session>

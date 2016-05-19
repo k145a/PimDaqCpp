@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=user1
+useridperkey=debian.BeagleBone Module\=debian;debian.Local\=user1;

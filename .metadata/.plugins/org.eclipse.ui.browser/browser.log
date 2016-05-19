@@ -1,0 +1,16 @@
+
+May 17, 2016 15:19:18.90 NEW SESSION
+May 17, 2016 15:19:18.90 
+May 17, 2016 15:19:18.90 (process:7008): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+May 17, 2016 15:19:18.92 Error: No running window found
+May 17, 2016 15:19:19.03 
+May 17, 2016 15:19:19.03 (process:7015): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+May 17, 2016 15:19:19.15 Gtk-Message: Failed to load module "canberra-gtk-module"
+May 17, 2016 15:19:23.90 console.error: 
+May 17, 2016 15:19:23.90   [CustomizableUI]
+May 17, 2016 15:19:23.90   Custom widget with id loop-button does not return a valid node
+May 17, 2016 15:19:24.03 console.error: 
+May 17, 2016 15:19:24.04   [CustomizableUI]
+May 17, 2016 15:19:24.04   Custom widget with id loop-button does not return a valid node
+May 17, 2016 15:19:24.54 
+May 17, 2016 15:19:24.54 (process:7061): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed

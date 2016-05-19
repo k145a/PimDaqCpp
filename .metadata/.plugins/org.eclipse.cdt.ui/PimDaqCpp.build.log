@@ -1,0 +1,30 @@
+11:53:42 **** Incremental Build of configuration Debug for project PimDaqCpp ****
+make all 
+Building file: ../src/PimDaqCpp.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -I/usr/include -I"/home/user1/git/prussdrv" -I/usr/bin -I/home/user1/git/pru-software-support-package/include -I/home/user1/git/am335x_pru_package/pru_sw/app_loader/include -I/home/user1/git/pru-software-support-package/include/am335x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PimDaqCpp.d" -MT"src/PimDaqCpp.o" -o "src/PimDaqCpp.o" "../src/PimDaqCpp.cpp"
+../src/PimDaqCpp.cpp: In function ‘int main()’:
+../src/PimDaqCpp.cpp:17:14: warning: unused variable ‘now’ [-Wunused-variable]
+  struct tm * now = localtime(& t);
+              ^
+Finished building: ../src/PimDaqCpp.cpp
+ 
+Building target: PimDaqCpp
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++ -L/home/user1/git/pru-software-support-package/lib/src/rpmsg_lib -L/lib/arm-linux-gnueabihf -L/home/user1/git/pru-software-support-package/lib -o "PimDaqCpp"  ./src/PimDaqCpp.o   
+Finished building target: PimDaqCpp
+ 
+make --no-print-directory post-build
+scp PimDaqCpp debian@192.168.7.2:/home/debian/
+Debian GNU/Linux 7
+
+BeagleBoard.org Debian Image 2015-11-12
+
+Support/FAQ: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+
+11:53:50 Build Finished (took 8s.158ms)
+
