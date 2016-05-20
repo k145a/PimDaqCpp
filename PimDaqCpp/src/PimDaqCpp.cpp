@@ -10,7 +10,7 @@
 #include<ctime>
 using namespace std;
 
-int main2() {
+int main() {
 	time_t t = time(0);
 	// convert now to string form
 	char* dt = ctime(&t);
