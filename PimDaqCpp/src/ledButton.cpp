@@ -13,7 +13,7 @@
 
 #define PRU_NUM	0   // using PRU0 for these examples
 
-int main55 (void)
+int main11 (void)
 {
    if(getuid()!=0){
       printf("You must run this program as root. Exiting.\n");
