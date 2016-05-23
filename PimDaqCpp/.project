@@ -24,4 +24,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>interface</name>
+			<type>2</type>
+			<location>/home/user1/git/am335x_pru_package/pru_sw/app_loader/interface</location>
+		</link>
+	</linkedResources>
 </projectDescription>

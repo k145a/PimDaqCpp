@@ -7,10 +7,10 @@
 //============================================================================
 
 #include <iostream>
-#include<ctime>
+#include <ctime>
 using namespace std;
 
-int main() {
+int main2() {
 	time_t t = time(0);
 	// convert now to string form
 	char* dt = ctime(&t);
