@@ -17,7 +17,7 @@ int main (void)
 {
    if(getuid()!=0){
       printf("You must run this program as root. Exiting.\n");
-      exit(EXIT_FAILURE);
+    //  exit(EXIT_FAILURE);
    }
 	//RK set pin direction to output
 	int GPIOPin = 48;
@@ -26,11 +26,11 @@ int main (void)
 	sprintf(GPIOString, "%d", GPIOPin);
 	sprintf(GPIOValue, "/sys/class/gpio/gpio%d/value", GPIOPin);
 	sprintf(GPIODirection, "/sys/class/gpio/gpio%d/direction", GPIOPin);
-	// Export the pin
+	//rk Export the pin
 	if ((myOutputHandle = fopen("/sys/class/gpio/export", "ab")) == NULL)
 	{
 	printf("Unable to export GPIO Pin\n");
-	return 1;	
+	//rk return 1;
 	}
 	strcpy(setValue, GPIOString);
 	fwrite(&setValue, sizeof(char),2, myOutputHandle);
@@ -40,7 +40,7 @@ int main (void)
 	if ((myOutputHandle = fopen(GPIODirection, "rb+")) == NULL)
 	{
 	printf("Unable to open Direction handle\n");
-	return 1;
+	//rkreturn 1;
 	}
 	strcpy(setValue, "out");
 	fwrite(&setValue, sizeof(char), 3, myOutputHandle);
