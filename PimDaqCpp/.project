@@ -3,9 +3,6 @@
 	<name>PimDaqCpp</name>
 	<comment></comment>
 	<projects>
-		<project>pru-software-support-package</project>
-		<project>prussdrv</project>
-		<project>RemoteSystemsTempFiles</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
