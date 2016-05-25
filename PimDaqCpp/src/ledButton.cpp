@@ -30,7 +30,7 @@ int main (void)
 	if ((myOutputHandle = fopen("/sys/class/gpio/export", "ab")) == NULL)
 	{
 	printf("Unable to export GPIO Pin\n");
-	//rk return 1;
+	return 1;
 	}
 	strcpy(setValue, GPIOString);
 	fwrite(&setValue, sizeof(char),2, myOutputHandle);
@@ -40,7 +40,7 @@ int main (void)
 	if ((myOutputHandle = fopen(GPIODirection, "rb+")) == NULL)
 	{
 	printf("Unable to open Direction handle\n");
-	//rkreturn 1;
+	return 1;
 	}
 	strcpy(setValue, "out");
 	fwrite(&setValue, sizeof(char), 3, myOutputHandle);
@@ -58,7 +58,7 @@ int main (void)
    prussdrv_pruintc_init(&pruss_intc_initdata);
    
    // Load and execute the PRU program on the PRU
-   prussdrv_exec_program (PRU_NUM, "./ledButton.bin");
+   prussdrv_exec_program (PRU_NUM, "../home/debian/gpioLEDButton/gpioLEDButton/ledButton.bin");
 
    // Wait for event completion from PRU, returns the PRU_EVTOUT_0 number
    int n = prussdrv_pru_wait_event (PRU_EVTOUT_0);
