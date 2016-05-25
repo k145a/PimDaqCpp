@@ -13,6 +13,10 @@
 
 #define PRU_NUM	0   // using PRU0 for these examples
 
+/*** test definitions ****/
+#define HWREG(x) (*((volatile unsigned int * ) (x)))
+
+/*******************************************/
 int main (void)
 {
    if(getuid()!=0){
