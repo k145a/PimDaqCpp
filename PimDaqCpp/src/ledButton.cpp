@@ -10,19 +10,33 @@
 #include <prussdrv.h>
 #include <pruss_intc_mapping.h>
 #include <unistd.h>
+#include <pthread.h>
+#include <iostream>
 
 #define PRU_NUM	0   // using PRU0 for these examples
 
 /*** test definitions ****/
 #define HWREG(x) (*((volatile unsigned int * ) (x)))
+int x1, iret1, iret2;
+
+// function run in thread while waiting for input
+void *threadInputDetect(void *value){
+	 // Wait for event completion from PRU, returns the PRU_EVTOUT_0 number
+	   int n = prussdrv_pru_wait_event (PRU_EVTOUT_0);
+	   printf("EBB PRU program completed, event number %d.\n", n);
+}
 
 /*******************************************/
 int main (void)
 {
+	x1 = 0;
    if(getuid()!=0){
       printf("You must run this program as root. Exiting.\n");
     //  exit(EXIT_FAILURE);
    }
+   pthread_t thread; //handle to thread
+   const char *message1 = "thread 1";
+
 	//RK set pin direction to output
 	int GPIOPin = 48;
 	FILE *myOutputHandle = NULL;
@@ -65,9 +79,15 @@ int main (void)
    prussdrv_exec_program (PRU_NUM, "../home/debian/gpioLEDButton/gpioLEDButton/ledButton.bin");
 
    // Wait for event completion from PRU, returns the PRU_EVTOUT_0 number
-   int n = prussdrv_pru_wait_event (PRU_EVTOUT_0);
-   printf("EBB PRU program completed, event number %d.\n", n);
-
+  // int n = prussdrv_pru_wait_event (PRU_EVTOUT_0);
+  // printf("EBB PRU program completed, event number %d.\n", n);
+   //create thread, pass ref addr of function and data
+     iret1 = pthread_create(&thread, NULL, threadInputDetect,(void*) message1);
+     if(iret1)
+     {
+  	   printf( "failed to create thread");
+  	   return 1;
+     }
    // Disable PRU and close memory mappings
    prussdrv_pru_disable(PRU_NUM);
    prussdrv_exit ();
