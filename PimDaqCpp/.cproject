@@ -27,6 +27,7 @@
 								<option id="gnu.c.compiler.option.dialect.std.1181753705" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1863821959" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="/usr/include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
 									<listOptionValue builtIn="false" value="/usr/include/c++"/>
 									<listOptionValue builtIn="false" value="/home/user1/git/prussdrv"/>
 									<listOptionValue builtIn="false" value="/usr/i586-linux-gnu/arm-linux-gnueabihf/lib"/>
@@ -39,6 +40,7 @@
 								<option id="gnu.cpp.compiler.option.dialect.std.1710456417" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1247316946" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="/usr/include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
 									<listOptionValue builtIn="false" value="/usr/include/c++"/>
 									<listOptionValue builtIn="false" value="/home/user1/git/prussdrv"/>
 									<listOptionValue builtIn="false" value="/usr/i586-linux-gnu/arm-linux-gnueabihf/lib"/>

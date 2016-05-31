@@ -1,11 +1,9 @@
 /*
- * GPIO.h
+ * @file GPIO.h
+ * @author Derek Molloy
+ * @version 0.1
  *
- *  Created on: May 27, 2016
- *      Author: user1
- */
-/*
- * GPIO.h  Created on: 29 Apr 2014
+ * Created on: 29 Apr 2014
  * Copyright (c) 2014 Derek Molloy (www.derekmolloy.ie)
  * Made available for the book "Exploring BeagleBone"
  * See: www.exploringbeaglebone.com
@@ -40,25 +38,33 @@ using std::ofstream;
 namespace exploringBB {
 
 typedef int (*CallbackType)(int);
-enum GPIO_DIRECTION{ INPUT, OUTPUT };
-enum GPIO_VALUE{ LOW=0, HIGH=1 };
-enum GPIO_EDGE{ NONE, RISING, FALLING, BOTH };
 
+/**
+ * @class GPIO
+ * @brief GPIO class for input and output functionality on a single GPIO pin
+ */
 class GPIO {
+public:
+	enum DIRECTION{ INPUT, OUTPUT };
+	enum VALUE{ LOW=0, HIGH=1 };
+	enum EDGE{ NONE, RISING, FALLING, BOTH };
+
 private:
-	int number, debounceTime;
-	string name, path;
+	int number;			/**< The GPIO number of the object */
+	int debounceTime;   /**< The debounce time in milliseconds */
+	string name;		/**< The name of the GPIO e.g. gpio50 */
+	string path;  		/**< The full path to the GPIO e.g. /sys/class/gpio/gpio50/ */
 
 public:
-	GPIO(int number); //constructor will export the pin
-	virtual int getNumber() { return number; }
+	GPIO(int number);
+	virtual int getNumber() { return number; } /**< Returns the GPIO number as an int. */
 
 	// General Input and Output Settings
-	virtual int setDirection(GPIO_DIRECTION);
-	virtual GPIO_DIRECTION getDirection();
-	virtual int setValue(GPIO_VALUE);
+	virtual int setDirection(GPIO::DIRECTION);
+	virtual GPIO::DIRECTION getDirection();
+	virtual int setValue(GPIO::VALUE);
 	virtual int toggleOutput();
-	virtual GPIO_VALUE getValue();
+	virtual GPIO::VALUE getValue();
 	virtual int setActiveLow(bool isLow=true);  //low=1, high=0
 	virtual int setActiveHigh(); //default
 	//software debounce input (ms) - default 0
@@ -66,7 +72,7 @@ public:
 
 	// Advanced OUTPUT: Faster write by keeping the stream alive (~20X)
 	virtual int streamOpen();
-	virtual int streamWrite(GPIO_VALUE);
+	virtual int streamWrite(GPIO::VALUE);
 	virtual int streamClose();
 
 	virtual int toggleOutput(int time); //threaded invert output every X ms.
@@ -75,8 +81,8 @@ public:
 	virtual void toggleCancel() { this->threadRunning = false; }
 
 	// Advanced INPUT: Detect input edges; threaded and non-threaded
-	virtual int setEdgeType(GPIO_EDGE);
-	virtual GPIO_EDGE getEdgeType();
+	virtual int setEdgeType(GPIO::EDGE);
+	virtual GPIO::EDGE getEdgeType();
 	virtual int waitForEdge(); // waits until button is pressed
 	virtual int waitForEdge(CallbackType callback); // threaded with callback
 	virtual void waitForEdgeCancel() { this->threadRunning = false; }
@@ -84,9 +90,9 @@ public:
 	virtual ~GPIO();  //destructor will unexport the pin
 
 private:
-	int write(string path, string filename, string value);
-	int write(string path, string filename, int value);
-	string read(string path, string filename);
+	//int write(string path, string filename, string value);
+	//int write(string path, string filename, int value);
+	//string read(string path, string filename);
 	int exportGPIO();
 	int unexportGPIO();
 	ofstream stream;
