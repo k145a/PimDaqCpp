@@ -25,7 +25,7 @@
  * For more details, see http://www.derekmolloy.ie/
  */
 
-#include "GPIO.h"
+#include <GPIO.h>
 #include "util.h"
 #include<iostream>
 #include<fstream>
@@ -50,7 +50,6 @@ GPIO::GPIO(int number) {
 	this->togglePeriod=100;
 	this->toggleNumber=-1; //infinite number
 	this->callbackFunction = NULL;
-	this->thread = NULL;
 	this->threadRunning = false;
 
 	ostringstream s;
@@ -111,14 +110,14 @@ GPIO::GPIO(int number) {
  * @return int that describes if the operation fails
  */
 int GPIO::exportGPIO(){
-   return write(GPIO_PATH, "export", this->number);
+   return write(this->path, "export", this->number);
 }
 
 int GPIO::unexportGPIO(){
-   return write(GPIO_PATH, "unexport", this->number);
+   return write(this->path, "unexport", this->number);
 }
 
-virtual int GPIO::setDirection(GPIO::GPIO_DIRECTION dir){
+int GPIO::setDirection(GPIO::DIRECTION dir){
    switch(dir){
    case INPUT: return write(this->path, "direction", "in");
       break;
@@ -296,4 +295,3 @@ GPIO::~GPIO() {
 }
 
 } /* namespace exploringBB */
-

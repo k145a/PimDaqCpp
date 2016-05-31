@@ -45,14 +45,14 @@ int main (void)
    }
 
    	 GPIO outGPIO(49), inGPIO(115);
-     inGPIO.setDirection(INPUT);    //button is an input
-     outGPIO.setDirection(OUTPUT);  //LED is an output
-     inGPIO.setEdgeType(RISING);    //wait for rising edge
+     inGPIO.setDirection(GPIO::INPUT);    //button is an input
+     outGPIO.setDirection(GPIO::OUTPUT);  //LED is an output
+     inGPIO.setEdgeType(GPIO::RISING);    //wait for rising edge
      outGPIO.streamOpen();          //fast write, ready file
-     outGPIO.streamWrite(LOW);      //turn the LED off
+     outGPIO.streamWrite(GPIO::LOW);      //turn the LED off
      cout << "Press the button:" << endl;
      inGPIO.waitForEdge();          //will wait forever
-     outGPIO.streamWrite(HIGH);     //button pressed, light LED
+     outGPIO.streamWrite(GPIO::HIGH);     //button pressed, light LED
      outGPIO.streamClose();         //close the output stream
 
      pthread_t thread; //handle to thread
