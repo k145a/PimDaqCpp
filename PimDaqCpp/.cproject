@@ -56,6 +56,7 @@
 								<option id="gnu.cpp.link.option.paths.1892827674" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/usr/lib"/>
 									<listOptionValue builtIn="false" value="/usr/i586-linux-gnu/arm-linux-gnueabihf/lib"/>
+									<listOptionValue builtIn="false" value="/home/user1/git/am335x_pru_package/pru_sw/app_loader/lib"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1192229269" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
