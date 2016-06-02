@@ -48,6 +48,7 @@ int write(string path, string filename, string value){
    fs.close();
    return 0;
 }
+
 /**
  * Helper read function that reads a single string value to a file from the path provided
  * @param path The sysfs path of the file to be read
