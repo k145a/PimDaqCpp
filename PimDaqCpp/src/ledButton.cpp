@@ -25,6 +25,15 @@ using namespace std;
 
 int x1, iret1, iret2;
 
+GPIO *outGPIO, *inGPIO;           //global pointers
+
+int activateLED(int var){
+   outGPIO->streamWrite(HIGH);    //turn on the LED
+   cout << "Button Pressed" << endl;
+   return 0;
+}
+
+/*******************************************/
 // function run in thread while waiting for input
 void *threadInputDetect(void *value){
 	 // Wait for event completion from PRU, returns the PRU_EVTOUT_0 number
@@ -35,7 +44,7 @@ void *threadInputDetect(void *value){
 	   return 0;
 }
 
-/*******************************************/
+
 int main (void)
 {
 	x1 = 0;
@@ -43,17 +52,24 @@ int main (void)
       printf("You must run this program as root. Exiting.\n");
     //  exit(EXIT_FAILURE);
    }
+   // *******  start of original file test_syspoll.cpp ***********
+   //P9_15 gpio1[16] Output - bit 16 HYDRO ALRM 32 x1 + 16 = 48
+   //P9_25 pru1_pru_r31_5 (IN) AKA gpio3_19  32x3 + 5 =101
+   inGPIO = new GPIO(101);        //button
+   outGPIO = new GPIO(48);        //LED
+   inGPIO->setDirection(INPUT);   //button is an input
+   outGPIO->setDirection(OUTPUT); //LED is an output
+   outGPIO->streamOpen();         //fast write to LED
+   outGPIO->streamWrite(HIGH);     //turn the LED off
+   inGPIO->setEdgeType(RISING);   //wait for rising edge
+   cout << "You have 10 seconds to press the button:" << endl;
+   inGPIO->waitForEdge(&activateLED); //pass the function
+   cout << "Listening, but also doing something else..." << endl;
+   usleep(20000000);              //allow 10 seconds
+   outGPIO->streamWrite(LOW);     //turn off the LED after 10 seconds
+   outGPIO->streamClose();        //sutdown
 
-   	 GPIO outGPIO(49), inGPIO(115);
-     inGPIO.setDirection(GPIO::INPUT);    //button is an input
-     outGPIO.setDirection(GPIO::OUTPUT);  //LED is an output
-     inGPIO.setEdgeType(GPIO::RISING);    //wait for rising edge
-     outGPIO.streamOpen();          //fast write, ready file
-     outGPIO.streamWrite(GPIO::LOW);      //turn the LED off
-     cout << "Press the button:" << endl;
-     inGPIO.waitForEdge();          //will wait forever
-     outGPIO.streamWrite(GPIO::HIGH);     //button pressed, light LED
-     outGPIO.streamClose();         //close the output stream
+ // *******  end of original file test_syspoll.cpp ***********
 
      pthread_t thread; //handle to thread
      const char *message1 = "thread 1";
