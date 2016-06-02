@@ -134,6 +134,7 @@ int GPIO::setValue(GPIO::VALUE value){
    case LOW: return write(this->path, "value", "0");
       break;
    }
+
    return -1;
 }
 
