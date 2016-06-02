@@ -55,7 +55,8 @@ int main (void)
    // *******  start of original file test_syspoll.cpp ***********
    //P9_15 gpio1[16] Output - bit 16 HYDRO ALRM 32 x1 + 16 = 48
    //P9_25 pru1_pru_r31_5 (IN) AKA gpio3_19  32x3 + 5 =101
-   inGPIO = new GPIO(101);        //button
+   //P8_16 gpio1_14 input  32x1 + 14 = 46
+   inGPIO = new GPIO(46);        //button
    outGPIO = new GPIO(48);        //LED
    inGPIO->setDirection(INPUT);   //button is an input
    outGPIO->setDirection(OUTPUT); //LED is an output
@@ -65,7 +66,7 @@ int main (void)
    cout << "You have 10 seconds to press the button:" << endl;
    inGPIO->waitForEdge(&activateLED); //pass the function
    cout << "Listening, but also doing something else..." << endl;
-   usleep(20000000);              //allow 10 seconds
+  // usleep(20000000);              //allow 10 seconds
    outGPIO->streamWrite(LOW);     //turn off the LED after 10 seconds
    outGPIO->streamClose();        //sutdown
 
@@ -116,8 +117,8 @@ int main (void)
    prussdrv_exec_program (PRU_NUM, "../home/debian/gpioLEDButton/gpioLEDButton/ledButton.bin");
 
    // Wait for event completion from PRU, returns the PRU_EVTOUT_0 number
-  // int n = prussdrv_pru_wait_event (PRU_EVTOUT_0);
-  // printf("EBB PRU program completed, event number %d.\n", n);
+   int n = prussdrv_pru_wait_event (PRU_EVTOUT_0);
+   printf("EBB PRU program completed, event number %d.\n", n);
    //create thread, pass ref addr of function and data
      iret1 = pthread_create(&thread, NULL, threadInputDetect,(void*) message1);
      if(iret1)
