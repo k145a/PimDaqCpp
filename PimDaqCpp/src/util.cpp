@@ -28,7 +28,6 @@
 #include<sstream>
 using namespace std;
 
-
 namespace exploringBB {
 /**
  * Helper write function that writes a single string value to a file in the path provided
