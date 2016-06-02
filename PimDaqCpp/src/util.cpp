@@ -28,8 +28,8 @@
 #include<sstream>
 using namespace std;
 
-namespace exploringBB {
 
+namespace exploringBB {
 /**
  * Helper write function that writes a single string value to a file in the path provided
  * @param path The sysfs path of the file to be modified
