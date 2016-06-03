@@ -14,13 +14,22 @@
 #include <iostream>
 #include "GPIO.h"
 
+#include <fstream>
+#include <vector>
+
+#include <rapidxml.hpp>
+#include <rapidxml_utils.hpp>
+//#include <rapidxml_iterators.hpp>
+
 #define PRU_NUM	0   // using PRU0 for these examples
 
 /*** test definitions ****/
 #define HWREG(x) (*((volatile unsigned int * ) (x)))
 
+
 using namespace exploringBB;
 using namespace std;
+using namespace rapidxml;
 
 
 int x1, iret1, iret2;
@@ -44,6 +53,41 @@ void *threadInputDetect(void *value){
 	   return 0;
 }
 
+int xmlLoad1(void){
+	//ref https://gist.github.com/JSchaenzle/2726944
+
+	// With the xml example above this is the <document/> node
+
+	xml_document<> doc;
+		xml_node<> * root_node;
+		// Read the xml file into a vector
+		ifstream theFile ("../GPIOSetup.xml");
+		vector<char> buffer((istreambuf_iterator<char>(theFile)), istreambuf_iterator<char>());
+		buffer.push_back('\0');
+		// Parse the buffer using the xml file parsing library into doc
+/*		doc.parse<0>(&buffer[0]);
+		// Find our root node
+		root_node = doc.first_node("GPIOSetup.xml");
+		// Iterate over the brewerys
+		for (xml_node<> * brewery_node = root_node->first_node("GPIO"); brewery_node; brewery_node = brewery_node->next_sibling())
+		{
+		    printf("I have visited %s in %s. ",
+		    	brewery_node->first_attribute("name")->value(),
+		    	brewery_node->first_attribute("position")->value(),
+				brewery_node->first_attribute("Direction")->value());
+	            // Interate over the beers
+		    for(xml_node<> * beer_node = brewery_node->first_node("param"); beer_node; beer_node = beer_node->next_sibling())
+		    {
+		    	printf("On %s, I tried their %s which is a %s. ",
+		    		beer_node->first_attribute("dateSampled")->value(),
+		    		beer_node->first_attribute("name")->value(),
+		    		beer_node->first_attribute("description")->value());
+		    	printf("I gave it the following review: %s", beer_node->value());
+		    }
+		    cout << endl;
+		}
+*/		return 0;
+}
 
 int main (void)
 {
@@ -52,29 +96,48 @@ int main (void)
       printf("You must run this program as root. Exiting.\n");
     //  exit(EXIT_FAILURE);
    }
+   xmlLoad1();
    // *******  start of original file test_syspoll.cpp ***********
-   //P9_15 gpio1[16] Output - bit 16 HYDRO ALRM 32 x1 + 16 = 48
-   //P9_25 pru1_pru_r31_5 (IN) AKA gpio3_19  32x3 + 5 =101
-   //P8_16 gpio1_14 input  32x1 + 14 = 46
+   //P8.50/P8.14 gpio0_26 output 32x0 +26=26
+   //P8.47/P8.16 gpio1_14 input  32x1 +14=46
+   //P8.43//P8.17 gpio0_27 input 32x0 +27=27
+   //p9.33/na  gpio3_18 input    32x3 +18=114
+   //P8.44/P8.18 gpio2_1 output 32x2 +1=65
+   //P8_71/na gpio2_0 output   32x2 +0=62
+   //P8.53/P8.12 gpio1_12 input 32x1 +12=44
+   //P9.28/P9.27 pr1_pru0_pru_r31_5 aka gpio3_19 input 32x3 +19=115
+   //P9.31/P9.25 pr1_pru0_pru_r31_7 aka gpio3_21 input 32x3 +19=117
+   //P8.46/P8.15 pr1_pru0_pru_r31_15 aka gpio1_15 input 32x1 +15=47
+   //P8.52/P8.11 gpio1_13 input 32x1 +13=45
+   //P9.53/P9.12 gpio1_28 output 32x1 +28=60
+   //P8.32/P8.26 gpio1_29 output 32x1 +29=61
+   //
+   //P8.73/P9_15 gpio1_16 Output - bit 16 HYDRO ALRM 32x1 +16 = 48
+   //P9_25 pru1_pru_r31_5 (IN) AKA gpio3_19  32x3 + 5=101
+
+
    inGPIO = new GPIO(46);        //button
-   outGPIO = new GPIO(48);        //LED
    inGPIO->setDirection(INPUT);   //button is an input
+   inGPIO->setEdgeType(RISING);   //wait for rising edge
+   inGPIO->waitForEdge(&activateLED); //pass the function
+
+   outGPIO = new GPIO(48);        //LED
    outGPIO->setDirection(OUTPUT); //LED is an output
+
    outGPIO->streamOpen();         //fast write to LED
    outGPIO->streamWrite(HIGH);     //turn the LED off
-   inGPIO->setEdgeType(RISING);   //wait for rising edge
+
    cout << "You have 10 seconds to press the button:" << endl;
-   inGPIO->waitForEdge(&activateLED); //pass the function
    cout << "Listening, but also doing something else..." << endl;
   // usleep(20000000);              //allow 10 seconds
    outGPIO->streamWrite(LOW);     //turn off the LED after 10 seconds
-   outGPIO->streamClose();        //sutdown
+   outGPIO->streamClose();        //shutdown
 
  // *******  end of original file test_syspoll.cpp ***********
 
      pthread_t thread; //handle to thread
      const char *message1 = "thread 1";
-
+/*
 	//RK set pin direction to output
 	int GPIOPin = 48;
 	FILE *myOutputHandle = NULL;
@@ -101,7 +164,7 @@ int main (void)
 	strcpy(setValue, "out");
 	fwrite(&setValue, sizeof(char), 3, myOutputHandle);
 	fclose(myOutputHandle);
-
+*/
    // Initialize structure used by prussdrv_pruintc_intc
    // PRUSS_INTC_INITDATA is found in pruss_intc_mapping.h
    tpruss_intc_initdata pruss_intc_initdata = PRUSS_INTC_INITDATA;
@@ -131,3 +194,6 @@ int main (void)
   // prussdrv_exit ();
    return EXIT_SUCCESS;
 }
+
+
+
