@@ -69,7 +69,6 @@ void *threadInputDetect(void *value) {
 }
 
 int xmlLoad1(void) {
-
 	// With the xml example above this is the <document/> node
 
 	xml_document<> doc;
