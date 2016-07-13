@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AM335xGPIO>
+    <GPIO name="gpio0_26"  position="26" Direction="OUTPUT">
+    	<params>
+	        <param EdgeType="RISING" help="Falling/Rising edge to trigger interrupts"/>
+	        <param ActiveLevel="active_low" help= "When active, the state of the output will be low or high"/>
+	        <param ResetState="LOW" help="State of Output on reset or powerup"/>
+	        <param debounceTime="0" help="Delay in ms to allow Input to settle"/>
+	        <param togglePeriod="100" help="toggle period"/>
+	        <param toggleNumber="1" help="1=infinite"/>
+        </params>
+    </GPIO>
+    <GPIO name="gpio1_14"  position="46" Direction="INPUT">
+    	<params>
+	        <param EdgeType="RISING" help="Falling/Rising edge to trigger interrupts"/>
+	        <param ActiveLevel="active_low" help= "When active, the state of the output will be low or high"/>
+	        <param ResetState="LOW" help="State of Output on reset or powerup"/>
+	        <param debounceTime="0" help="Delay in ms to allow Input to settle"/>
+	        <param togglePeriod="100" help="toggle period"/>
+	        <param toggleNumber="1" help="1=infinite"/>
+        </params>
+    </GPIO>
+    <GPIO name="gpio1_16"  position="48" Direction="OUTPUT">
+    	<params>
+	        <param EdgeType="RISING" help="Falling/Rising edge to trigger interrupts"/>
+	        <param ActiveLevel="active_low" help= "When active, the state of the output will be low or high"/>
+	        <param ResetState="LOW" help="State of Output on reset or powerup"/>
+	        <param debounceTime="0" help="Delay in ms to allow Input to settle"/>
+	        <param togglePeriod="100" help="toggle period"/>
+	        <param toggleNumber="1" help="1=infinite"/>
+        </params>
+    </GPIO>
+</AM335xGPIO>
