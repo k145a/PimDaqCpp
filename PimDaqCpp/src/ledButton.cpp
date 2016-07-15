@@ -17,9 +17,9 @@
 #include <fstream>
 #include <vector>
 
-#include "./rapidxml-1.13/rapidxml.hpp"
-#include "./rapidxml-1.13/rapidxml_utils.hpp"
-//#include "./rapidxml-1.13/rapidxml_iterators.hpp"
+#include "../rapidxml-1.13/rapidxml.hpp"
+//#include "../rapidxml-1.13/rapidxml_utils.hpp"
+//#include "../rapidxml-1.13/rapidxml_iterators.hpp"
 
 #define PRU_NUM	0   // using PRU0 for these examples
 
@@ -67,14 +67,59 @@ void *threadInputDetect(void *value) {
 	printf("EBB PRU program completed, event number %d.\n", n);
 	return 0;
 }
+int xmlLoad(void) {
+
+	// With the xml example above this is the <document/> node
+	xml_document <> doc;
+	xml_node <> * root_node;
+	// Read the xml file into a vector
+	ifstream theFile("/home/debian/PimDaqCpp/PimDaqCpp/src/GPIOSetup.xml");
+	if (theFile.good()) {
+		vector<char> buffer((istreambuf_iterator<char>(theFile)),
+				istreambuf_iterator<char>());
+		buffer.push_back('\0');
+		// Parse the buffer using the xml file parsing library into doc
+		doc.parse<0>(&buffer[0]);
+		// Find our root node
+		root_node = doc.first_node("AM335xGPIO");
+		// Iterate over the brewerys
+		for (xml_node<> * brewery_node = root_node->first_node("GPIO");
+				brewery_node; brewery_node = brewery_node->next_sibling()) {
+			printf("GPIO Pin Name: %s, Position: %s, and Direction: %s /n",
+					brewery_node->first_attribute("name")->value(),
+					brewery_node->first_attribute("position")->value(),
+					brewery_node->first_attribute("direction")->value());
+			// Interate over the beers
+			for (xml_node<> * beer_node = brewery_node->first_node("params");
+					beer_node; beer_node = beer_node->next_sibling()) {
+				printf("Param Type: %s \n", beer_node->first_attribute("name")->value());
+				printf("Pin Text Message: %s \n", beer_node->value());
+				for (xml_node<> * beer_node2 = beer_node->first_node("param");
+									beer_node2; beer_node2 = beer_node2->next_sibling()) {
+					printf("ParamName: %s, ParamValue: %s, ParamHelp: %s \n",
+							beer_node2->first_attribute("paramName")->value(),
+							beer_node2->first_attribute("paramValue")->value(),
+							beer_node2->first_attribute("help")->value());
+
+				}
+
+
+			}
+			cout << endl;
+		}
+	}
+
+	return 0;
+
+}
 
 int xmlLoad1(void) {
-	// With the xml example above this is the <document/> node
 
-	xml_document<> doc;
-	xml_node<> * root_node;
+	// With the xml example above this is the <document/> node
+	xml_document <> doc;
+	xml_node <> * root_node;
 	// Read the xml file into a vector
-	ifstream theFile("PimDaqCpp/PimDaqCpps/src/GPIOSetup1.xml");
+	ifstream theFile("/home/debian/PimDaqCpp/PimDaqCpp/src/GPIOSetup1.xml");
 	if (theFile.good()) {
 		vector<char> buffer((istreambuf_iterator<char>(theFile)),
 				istreambuf_iterator<char>());
@@ -88,8 +133,8 @@ int xmlLoad1(void) {
 				brewery_node; brewery_node = brewery_node->next_sibling()) {
 			printf("I have visited %s in %s. ",
 					brewery_node->first_attribute("name")->value(),
-					brewery_node->first_attribute("position")->value(),
-					brewery_node->first_attribute("Direction")->value());
+					brewery_node->first_attribute("location")->value());
+					//brewery_node->first_attribute("direction")->value());
 			// Interate over the beers
 			for (xml_node<> * beer_node = brewery_node->first_node("param");
 					beer_node; beer_node = beer_node->next_sibling()) {
@@ -103,7 +148,9 @@ int xmlLoad1(void) {
 			cout << endl;
 		}
 	}
+
 	return 0;
+
 }
 
 int main(void) {
@@ -112,7 +159,7 @@ int main(void) {
 		printf("You must run this program as root. Exiting.\n");
 		//  exit(EXIT_FAILURE);
 	}
-	xmlLoad1();
+	xmlLoad();
 	// *******  start of original file test_syspoll.cpp ***********
 	//P8.50/P8.14 gpio0_26 output 32x0 +26=26
 	//P8.47/P8.16 gpio1_14 input  32x1 +14=46
