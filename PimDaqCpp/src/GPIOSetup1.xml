@@ -9,6 +9,7 @@
         <Beer name="Farmhouse Ale" description="Belgian Ale" rating="B" dateSampled="02/07/2015">
             This beer is not so good... but I am not that big of a fan of english style ales.
         </Beer>
+       
     </Brewery>
     <Brewery name="Bells Brewery" location="Kalamazoo, MI">
         <Beer name="Two Hearted Ale" description="IPA" rating="A" dateSampled="03/15/2012">
