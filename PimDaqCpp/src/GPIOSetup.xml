@@ -9,6 +9,7 @@
 	        <param  paramName="togglePeriod" paramValue="100" help="toggle period"/>
 	        <param  paramName="toggleNumber" paramValue="1" help="1=infinite"/>
 		"text1"
+		
         </params>
     </GPIO>
     <GPIO name="gpio1_14"  position="46" direction="INPUT">
