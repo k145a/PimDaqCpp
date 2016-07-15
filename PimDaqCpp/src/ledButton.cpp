@@ -93,7 +93,7 @@ int xmlLoad(void) {
 			for (xml_node<> * beer_node = brewery_node->first_node("params");
 					beer_node; beer_node = beer_node->next_sibling()) {
 				printf("Param Type: %s \n", beer_node->first_attribute("name")->value());
-				printf("Pin Text Message: %s \n", beer_node->value());
+
 				for (xml_node<> * beer_node2 = beer_node->first_node("param");
 									beer_node2; beer_node2 = beer_node2->next_sibling()) {
 					printf("ParamName: %s, ParamValue: %s, ParamHelp: %s \n",
@@ -102,7 +102,7 @@ int xmlLoad(void) {
 							beer_node2->first_attribute("help")->value());
 
 				}
-
+				printf("Pin Text Message: %s \n", beer_node->value());
 
 			}
 			cout << endl;
