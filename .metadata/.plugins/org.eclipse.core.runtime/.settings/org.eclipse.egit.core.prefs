@@ -1,3 +1,5 @@
-GitRepositoriesView.GitDirectories=/home/user1/git/pru-software-support-package/.git\:/home/user1/git/exploringBB/.git\:/home/user1/git/am335x_pru_package/.git\:/home/user1/git/prussdrv/.git\:/home/user1/workspace/.git\:
-GitRepositoriesView.GitDirectories.relative=/home/user1/git/pru-software-support-package/.git\:/home/user1/git/exploringBB/.git\:/home/user1/git/am335x_pru_package/.git\:/home/user1/git/prussdrv/.git\:.git\:
+GitRepositoriesView.GitDirectories=/home/user1/git/rapidxml-1.13/.git\:/home/user1/git/pru-software-support-package/.git\:/home/user1/git/PimDaqCpp/.git\:/home/user1/git/exploringBB/.git\:/home/user1/git/am335x_pru_package/.git\:/home/user1/git/prussdrv/.git\:
+GitRepositoriesView.GitDirectories.relative=/home/user1/git/rapidxml-1.13/.git\:/home/user1/git/pru-software-support-package/.git\:.git\:/home/user1/git/exploringBB/.git\:/home/user1/git/am335x_pru_package/.git\:/home/user1/git/prussdrv/.git\:
+RepositorySearchDialogDeepSearch=true
+RepositorySearchDialogSearchPath=/home/user1/git
 eclipse.preferences.version=1

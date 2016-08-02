@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Transmitter Name="PDAQ" Version="Q1.00.0006-008" Type="WSD9FmdPdaq.WSD9FmdPdaq">
+  <Items>
+    <Item ID="0" UseList="false" Access="4" Backup="true" Restore="false" Wait="0.5" Length="10" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Software date" Help="Date of transmitter software" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="2" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="1" UseList="false" Access="2" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Comm Address" Help="Communication address of transmitter" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="true" Min="0" Max="32" />
+      </Variables>
+    </Item>
+    <Item ID="2" UseList="true" Access="3" Backup="true" Restore="true" Wait="0.5" Length="4" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Baud rate" Help="Baud rate of transmitter" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="3" Function="2" EnMinMax="true" Min="1200" Max="57600" />
+      </Variables>
+    </Item>
+    <Item ID="3" UseList="false" Access="4" Backup="true" Restore="false" Wait="0.5" Length="14" Historian="false" Masstrack="2">
+      <Variables>
+        <var ID="0" Title="Software version" Help="Version number of transmitter software" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="2" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="4" UseList="false" Access="0" Backup="false" Restore="false" Length="1" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Unit Number" Help="Communication Address when using Prove-It protocol" Symbol="" Dimension="0" Unit="0" Decimals="0" List="UNIT_NUMBER" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="5" UseList="false" Access="0" Backup="false" Restore="false" Wait="0.5" Length="10" Historian="false" Masstrack="2">
+      <Variables>
+        <var ID="0" Title="Transmitter serial" Help="Serial number of transmitter" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="2" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="6" UseList="false" Access="0" Backup="false" Restore="false" Length="1" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Reset PDAQ" Help="Soft resets or cold starts PDAQ" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="7" UseList="false" Access="1" Backup="false" Restore="false" Length="2" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Launch Prover pulse width" Help="Pulse width of launch prover pulse" Symbol="" Dimension="15" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" SimMode="Fixed" SimValue="0" SimDevMax="0" SimIncrement="0" Expression="" />
+      </Variables>
+    </Item>
+    <Item ID="8" UseList="false" Access="1" Backup="false" Restore="false" Length="2" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Control pulse width" Help="Debouncing time of prover control pulses" Symbol="" Dimension="15" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="9" UseList="false" Access="2" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Launch Prover Pulse Reset Mode" Help="Controls whether a 7, Launch Prover ulse width or the 2nd prover pulse resets lanuch pulse" Symbol="" Dimension="0" Unit="0" Decimals="0" List="LAUNCH_PROVER_PULSE_MODE" Parent="0" DataType="0" Function="1" EnMinMax="true" Min="0" Max="1" />
+      </Variables>
+    </Item>
+    <Item ID="10" UseList="false" Access="4" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Major Version Number" Help="PDAQ reported version number (major)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="true" Min="0" Max="32" />
+      </Variables>
+    </Item>
+    <Item ID="11" UseList="false" Access="4" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Minor Version Number" Help="PDAQ reported version number (minor)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="true" Min="0" Max="32" />
+      </Variables>
+    </Item>
+    <Item ID="12" UseList="false" Access="4" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Port1 value" Help="PDAQ port1 value" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="true" Min="0" Max="32" />
+      </Variables>
+    </Item>
+    <Item ID="13" UseList="false" Access="4" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Port2 value" Help="PDAQ port2 value" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="true" Min="0" Max="32" />
+      </Variables>
+    </Item>
+    <Item ID="14" UseList="false" Access="4" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Status byte" Help="PDAQ status byte value" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="true" Min="0" Max="32" />
+      </Variables>
+    </Item>
+    <Item ID="15" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="2">
+      <Variables>
+        <var ID="0" Title="Timer &quot;A1&quot;" Help="Time elapsed between prover control pulses" Symbol="" Dimension="22" Unit="1" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="20" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="2">
+      <Variables>
+        <var ID="0" Title="Meter#1 Timer &quot;B1&quot;" Help="Time elapsed between prover control pulses" Symbol="" Dimension="22" Unit="1" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="21" UseList="false" Access="0" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Meter#1 pulse count" Help="Integer pulse count of Meter1" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="22" UseList="false" Access="0" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Meter#1 frequency" Help="Frequency of Meter1" Symbol="" Dimension="5" Unit="0" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="23" UseList="false" Access="0" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Meter#1 DC pulse count" Help="Calculated Dual Chronometry pulse count of Meter1" Symbol="" Dimension="21" Unit="0" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="30" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="2">
+      <Variables>
+        <var ID="0" Title="Meter#2 Timer &quot;B2&quot;" Help="Time elapsed between prover control pulses" Symbol="" Dimension="22" Unit="1" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="31" UseList="false" Access="0" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Meter#2 pulse count" Help="Integer pulse count of Meter2" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="32" UseList="false" Access="0" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Meter#2 frequency" Help="Frequency of Meter2" Symbol="" Dimension="5" Unit="0" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="33" UseList="false" Access="0" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Meter#2 DC pulse count" Help="Calculated Dual Chronometry pulse count of Meter2" Symbol="" Dimension="21" Unit="0" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="40" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="2">
+      <Variables>
+        <var ID="0" Title="30, Density Timer &quot;B3&quot;" Help="Time elapsed between prover control pulses" Symbol="" Dimension="22" Unit="1" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="41" UseList="false" Access="0" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Density pulse count" Help="Integer pulse count of Meter2" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="42" UseList="false" Access="0" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Density frequency" Help="Frequency of Meter3 (Density)" Symbol="" Dimension="5" Unit="0" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="43" UseList="false" Access="0" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Density DC pulse count" Help="Calculated Dual Chronometry pulse count of Density meter" Symbol="" Dimension="21" Unit="0" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="50" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Current#1" Help="Measured current at Analog Input#1" Symbol="" Dimension="12" Unit="1" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="51" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Current#2" Help="Measured current at Analog Input#2" Symbol="" Dimension="12" Unit="1" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="52" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Current#3" Help="Measured current at Analog Input#3" Symbol="" Dimension="12" Unit="1" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="53" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Current#4" Help="Measured current at Analog Input#4" Symbol="" Dimension="12" Unit="1" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="54" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0,5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Current#5" Help="Measured current at Analog Input#5" Symbol="" Dimension="12" Unit="1" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="55" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Current#6" Help="Measured current at Analog Input#6" Symbol="" Dimension="12" Unit="1" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="56" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Voltage#1" Help="Measured voltage at Analog Input#7" Symbol="" Dimension="3" Unit="1" Decimals="1" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="57" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Voltage#2" Help="Measured voltage at Analog Input#8" Symbol="" Dimension="3" Unit="1" Decimals="1" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="60" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Current input minimum" Help="Minimum current on current inputs(0 or 4 mA)" Symbol="" Dimension="12" Unit="1" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="61" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Current input maximum" Help="Maximum current on current inputs (20mA)" Symbol="" Dimension="12" Unit="1" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="62" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Voltage input minimum" Help="Minimum voltage on voltage inputs (0V)" Symbol="" Dimension="3" Unit="0" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="63" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Voltage input maximum" Help="Maximum voltage on voltage inputs (2.5V)" Symbol="" Dimension="3" Unit="0" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="64" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Voltage reference" Help="Real value of voltage reference (2.5V)" Symbol="" Dimension="3" Unit="0" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="65" UseList="false" Access="4" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Current input resistor" Help="Value of current input resistor (120 Ohms)" Symbol="" Dimension="23" Unit="0" Decimals="3" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="66" UseList="false" Access="2" Backup="false" Restore="false" Length="4" Wait="0.5" Historian="false" Masstrack="1">
+      <Variables>
+        <var ID="0" Title="Low cut off current inputs" Help="If current is lees than this value it will be treated as 0.0mA" Symbol="" Dimension="12" Unit="1" Decimals="2" List="" Parent="0" DataType="3" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="67" UseList="false" Access="4" Backup="false" Restore="false" Length="2" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Protect PDAQ Configuration" Help="Preserves the PDAQ configuration settings during Cold Start." Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" SimMode="Fixed" SimValue="0" SimDevMax="0" SimIncrement="0" Expression="" />
+      </Variables>
+    </Item>
+    <Item ID="140" UseList="false" Access="68" Backup="false" Restore="false" Wait="0.5" Length="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Current password level" Help="Currently set password level in transmitter" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="141" UseList="false" Access="228" Backup="false" Restore="false" Wait="0.5" Length="32" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Reference passwords" Help="Reference passwords in transmitter" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="6" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="1" Title="Password Level0" Help="Reference password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="2" Title="Password Level1" Help="Reference password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="3" Title="Password Level2" Help="Reference password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="4" Title="Password Level3" Help="Reference password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="5" Title="Password Level4" Help="Reference password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="6" Title="Password Level5" Help="Reference password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="7" Title="Password Level6" Help="Reference password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="8" Title="Password Level7" Help="Reference password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="142" UseList="false" Access="192" Backup="false" Restore="false" Wait="0.5" Length="2" Historian="true" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Control password#1" Help="Level#1 password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="143" UseList="false" Access="192" Backup="false" Restore="false" Wait="0.5" Length="2" Historian="true" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Control password#2" Help="Level#2 password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="144" UseList="false" Access="192" Backup="false" Restore="false" Wait="0.5" Length="2" Historian="true" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Control password#3" Help="Level#3 password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="145" UseList="false" Access="192" Backup="false" Restore="false" Wait="0.5" Length="2" Historian="true" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Control password#4" Help="Level#4 password" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="150" UseList="false" Access="0" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="true" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Initialize PDAQ" Help="Stops provering, resets all variables, clears status and ports bit" Symbol="" Dimension="0" Unit="0" Decimals="0" List="COMMAND_EXECUTE" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="151" UseList="false" Access="0" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="true" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Start PDAQ Timers" Help="Start all measurements without launching the prover" Symbol="" Dimension="0" Unit="0" Decimals="0" List="COMMAND_EXECUTE" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="152" UseList="false" Access="0" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="true" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Stop PDAQ Timers" Help="Stops all measurements and updates AFS protocol items." Symbol="" Dimension="0" Unit="0" Decimals="0" List="COMMAND_EXECUTE" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="153" UseList="false" Access="0" Backup="false" Restore="false" Length="234" Wait="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="PDAQ Full Status" Help="Gets Full Status record of PDAQ" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="5" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="1" Title="Version major" Help="Major version number" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="2" Title="Version minor" Help="Minor version number" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="3" Title="Port1" Help="Value of port1" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="4" Title="Port2" Help="Value of port2" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="5" Title="Status" Help="Value of status byte" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="6" Title="TimerA" Help="Value of TimerA" Symbol="" Dimension="20" Unit="2" Decimals="3" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="7" Title="TimerA start" Help="Time when TimerA was started" Symbol="" Dimension="20" Unit="2" Decimals="3" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="8" Title="TimerA stop" Help="Timer when the TimerA was stopped" Symbol="" Dimension="20" Unit="2" Decimals="3" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="9" Title="Counter1 start" Help="Time when Counter1 was started" Symbol="" Dimension="20" Unit="2" Decimals="3" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="10" Title="Counter1 stop" Help="Time when Counter1 was stopped" Symbol="" Dimension="20" Unit="2" Decimals="3" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="11" Title="Counter1 value" Help="Pulse count while the Counter1 was active" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="12" Title="Counter2 start" Help="Time when Counter2 was started" Symbol="" Dimension="20" Unit="2" Decimals="3" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="13" Title="Counter2 stop" Help="Time when Counter2 was stopped" Symbol="" Dimension="20" Unit="2" Decimals="3" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="14" Title="Counter2 value" Help="Pulse count while the Counter2 was active" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="15" Title="Counter3 start" Help="Time when Counter3 was started" Symbol="" Dimension="20" Unit="2" Decimals="3" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="16" Title="Counter3 stop" Help="Time when Counter3 was stopped" Symbol="" Dimension="20" Unit="2" Decimals="3" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="17" Title="Counter3 value" Help="Pulse count while the Counter3 was active" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="18" Title="Analog1 sample count" Help="Shows how many samples are in the Analog1 sum" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="19" Title="Analog1 sum" Help="Sum of AD converter samples" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="20" Title="Analog2 sample count" Help="Shows how many samples are in the Analog2 sum" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="21" Title="Analog2 sum" Help="Sum of AD converter samples" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="22" Title="Analog3 sample count" Help="Shows how many samples are in the Analog3 sum" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="23" Title="Analog3 sum" Help="Sum of AD converter samples" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="24" Title="Analog4 sample count" Help="Shows how many samples are in the Analog4 sum" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="25" Title="Analog4 sum" Help="Sum of AD converter samples" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="26" Title="Analog5 sample count" Help="Shows how many samples are in the Analog5 sum" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="27" Title="Analog5 sum" Help="Sum of AD converter samples" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="28" Title="Analog6 sample count" Help="Shows how many samples are in the Analog6 sum" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="29" Title="Analog6 sum" Help="Sum of AD converter samples" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="30" Title="Analog7 sample count" Help="Shows how many samples are in the Analog7 sum" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="31" Title="Analog7 sum" Help="Sum of AD converter samples" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="32" Title="Analog8 sample count" Help="Shows how many samples are in the Analog8 sum" Symbol="" Dimension="20" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="33" Title="Analog8 sum" Help="Sum of AD converter samples" Symbol="" Dimension="21" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="154" UseList="false" Access="0" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="true" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Launch Prover" Help="Starts provering" Symbol="" Dimension="0" Unit="0" Decimals="0" List="COMMAND_EXECUTE" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="155" UseList="false" Access="0" Backup="true" Restore="false" Wait="0.5" Length="1" Historian="true" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Return Prover" Help="Returns prover" Symbol="" Dimension="0" Unit="0" Decimals="0" List="COMMAND_EXECUTE" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="156" UseList="false" Access="0" Backup="false" Restore="false" Wait="0.5" Length="10" Historian="false" Masstrack="2">
+      <Variables>
+        <var ID="0" Title="PDAQ serial number" Help="Serial number of PDAQ" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="2" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="157" UseList="false" Access="0" Backup="false" Restore="false" Length="36" Wait="0.5" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="PDAQ configuration" Help="Gets PDAQ configuration record" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="5" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="1" Title="Clock" Help="Clock of PDAQ CPU. Real clock [µs] = 1E9 / (Value / 16)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="4" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="2" Title="Current1 ADC minimum" Help="ADC code @ voltage minimum (0 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="3" Title="Current1 ADC maximum" Help="ADC code @ voltage maximum (20 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="4" Title="Current2 ADC minimum" Help="ADC code @ voltage minimum (0 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="5" Title="Current2 ADC maximum" Help="ADC code @ voltage maximum (20 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="6" Title="Current3 ADC minimum" Help="ADC code @ voltage minimum (0 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="7" Title="Current3 ADC maximum" Help="ADC code @ voltage maximum (20 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="8" Title="Current4 ADC minimum" Help="ADC code @ voltage minimum (0 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="9" Title="Current4 ADC maximum" Help="ADC code @ voltage maximum (20 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="10" Title="Current5 ADC minimum" Help="ADC code @ voltage minimum (0 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="11" Title="Current5 ADC maximum" Help="ADC code @ voltage maximum (20 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="12" Title="Current6 ADC minimum" Help="ADC code @ voltage minimum (0 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="13" Title="Current6 ADC maximum" Help="ADC code @ voltage maximum (20 mA, 120Ω)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="14" Title="Voltage1 ADC minimum" Help="ADC code @ voltage minimum (0 V)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="15" Title="Voltage1 ADC maximum" Help="ADC code @ voltage maximum (2.5V)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="16" Title="Voltage2 ADC minimum" Help="ADC code @ voltage minimum (0 V)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="17" Title="Voltage2 ADC maximum" Help="ADC code @ voltage maximum (2.5V)" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="1" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="158" UseList="false" Access="0" Backup="false" Restore="false" Length="10" Wait="1" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="PDAQ Partial Status" Help="Gets Partial Status record of PDAQ" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="5" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="1" Title="Version major" Help="Major version number" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="2" Title="Version minor" Help="Minor version number" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="3" Title="Port1" Help="Value of port1" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="4" Title="Port2" Help="Value of port2" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+        <var ID="5" Title="Status" Help="Value of status byte" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="0" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="216" UseList="false" Access="4" Backup="true" Restore="false" Wait="0.5" Length="8" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Time" Help="Current time" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="2" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="217" UseList="false" Access="4" Backup="true" Restore="false" Wait="0.5" Length="8" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Date" Help="Current date" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="2" Function="1" EnMinMax="false" Min="" Max="" />
+      </Variables>
+    </Item>
+    <Item ID="223" UseList="false" Access="0" Backup="false" Restore="false" Wait="0.5" Length="8" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Tag" Help="Optional TAG info" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="2" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="224" UseList="false" Access="0" Backup="false" Restore="false" Wait="0.5" Length="16" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Descriptor" Help="Transmitter descriptor" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="2" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+    <Item ID="225" UseList="false" Access="0" Backup="false" Restore="false" Wait="0.5" Length="8" Historian="false" Masstrack="0">
+      <Variables>
+        <var ID="0" Title="Account Number" Help="Account number" Symbol="" Dimension="0" Unit="0" Decimals="0" List="" Parent="0" DataType="2" Function="1" EnMinMax="false" Min="0" Max="0" />
+      </Variables>
+    </Item>
+  </Items>
+  <Dimensions>
+    <Dimension ID="0" Title="None" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="1" Title="Phase" Metric="2" English="2">
+      <Units>
+        <Unit ID="0" Title="s" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="ms" Slope="1.0E+3" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="2" Title="µs" Slope="1.0E+6" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="2" Title="Temperature" Metric="0" English="1">
+      <Units>
+        <Unit ID="0" Title="°C" Slope="1.0" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="1" Title="°F" Slope="1.8" Offset="32.0" UnitSystem="English" />
+        <Unit ID="2" Title="°R" Slope="1.8" Offset="491.7" UnitSystem="AllUnits" />
+        <Unit ID="3" Title="°K" Slope="1.0" Offset="273.15" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="3" Title="Voltage" Metric="1" English="1">
+      <Units>
+        <Unit ID="0" Title="V" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="mV" Slope="1000.0" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="4" Title="Time" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="s" Slope="1.0" Offset="0.0" />
+        <Unit ID="1" Title="m" Slope="1.66666667E-2" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="2" Title="h" Slope="2.77777778E-4" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="5" Title="Frequency" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="Hz" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="kHz" Slope="0.001" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="6" Title="Mass flow" Metric="2" English="5">
+      <Units>
+        <Unit ID="0" Title="kg/s" Slope="1.0" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="1" Title="kg/m" Slope="6.0E+1" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="2" Title="kg/h" Slope="3.6E+3" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="3" Title="gr/m" Slope="6.0E+4" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="4" Title="lb/s" Slope="2.2046" Offset="0.0" UnitSystem="English" />
+        <Unit ID="5" Title="lb/m" Slope="1.32276E+2" Offset="0.0" UnitSystem="English" />
+        <Unit ID="6" Title="lb/h" Slope="7.93656E+3" Offset="0.0" UnitSystem="English" />
+        <Unit ID="7" Title="oz/m" Slope="2.11644E+3" Offset="0.0" UnitSystem="English" />
+      </Units>
+    </Dimension>
+    <Dimension ID="7" Title="Flow Factor" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="kg/s^2" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="8" Title="Percentage" Metric="1" English="1">
+      <Units>
+        <Unit ID="0" Title="-" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="%" Slope="100" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="9" Title="Mass" Metric="0" English="1">
+      <Units>
+        <Unit ID="0" Title="kg" Slope="1.0" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="1" Title="lb" Slope="2.2046" Offset="0.0" UnitSystem="English" />
+        <Unit ID="2" Title="t" Slope="1000" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="3" Title="oz" Slope="3.5274E+1" Offset="0.0" UnitSystem="English" />
+      </Units>
+    </Dimension>
+    <Dimension ID="10" Title="Density" Metric="1" English="2">
+      <Units>
+        <Unit ID="0" Title="gr/cc" Slope="1.0" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="1" Title="kg/m^3" Slope="1000" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="2" Title="lb/ft^3" Slope="62.42796" Offset="0.0" UnitSystem="English" />
+        <Unit ID="3" Title="lb/gal" Slope="8.34454" Offset="0.0" UnitSystem="English" />
+      </Units>
+    </Dimension>
+    <Dimension ID="11" Title="Drive code" Metric="1" English="1">
+      <Units>
+        <Unit ID="0" Title="DAC code" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="%" Slope="0.02442" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="2" Title="V" Slope="0.0013919411392" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="12" Title="Current" Metric="1" English="1">
+      <Units>
+        <Unit ID="0" Title="A" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="mA" Slope="1000.0" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="13" Title="Volume" Metric="1" English="2">
+      <Units>
+        <Unit ID="0" Title="l" Slope="1.0" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="1" Title="m^3" Slope="1000" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="2" Title="gal" Slope="0.264172" Offset="0.0" UnitSystem="English" />
+        <Unit ID="3" Title="bbl" Slope="0.006289803" Offset="0.0" UnitSystem="English" />
+      </Units>
+    </Dimension>
+    <Dimension ID="14" Title="Volumetric Flow Rate" Metric="5" English="9">
+      <Units>
+        <Unit ID="0" Title="l/s" Slope="1.0" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="1" Title="l/m" Slope="60" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="2" Title="l/h" Slope="3600" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="3" Title="l/day" Slope="86400" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="4" Title="m^3/m" Slope="0.06" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="5" Title="m^3/h" Slope="3.6" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="6" Title="m^3/day" Slope="86.4" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="7" Title="gps" Slope="0.26417" Offset="0.0" UnitSystem="English" />
+        <Unit ID="8" Title="gpm" Slope="15.8504" Offset="0.0" UnitSystem="English" />
+        <Unit ID="9" Title="gph" Slope="951.022" Offset="0.0" UnitSystem="English" />
+        <Unit ID="10" Title="bbl/m" Slope="0.377389" Offset="0.0" UnitSystem="English" />
+        <Unit ID="11" Title="bbl/h" Slope="2.264339E+1" Offset="0.0" UnitSystem="English" />
+        <Unit ID="12" Title="bbl/d" Slope="5.434413E+2" Offset="0.0" UnitSystem="English" />
+      </Units>
+    </Dimension>
+    <Dimension ID="15" Title="Timeout" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="ms" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="16" Title="Velocity" Metric="0" English="1">
+      <Units>
+        <Unit ID="0" Title="m/s" Slope="1.0" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="1" Title="ft/s" Slope=" 3.28083" Offset="0.0" UnitSystem="English" />
+        <Unit ID="2" Title="mm/s" Slope="1000" Offset="0.0" UnitSystem="Metric" />
+      </Units>
+    </Dimension>
+    <Dimension ID="17" Title="Pressure" Metric="0" English="1">
+      <Units>
+        <Unit ID="0" Title="bar" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="psi" Slope="14.5038" Offset="0.0" UnitSystem="English" />
+        <Unit ID="2" Title="atm" Slope="0.986923" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="3" Title="kPa" Slope="100" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="4" Title="inHg" Slope="29.53" Offset="0.0" UnitSystem="English" />
+        <Unit ID="5" Title="mmHg" Slope="750.062" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="6" Title="cmHg" Slope="75.062" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="7" Title="kg/cm2" Slope="1.019716" Offset="0.0" UnitSystem="Metric" />
+        <Unit ID="8" Title="barg" Slope="1.0" Offset="-1.0" UnitSystem="Metric" />
+        <Unit ID="9" Title="psig" Slope="14.5038" Offset="-14.5038" UnitSystem="English" />
+      </Units>
+    </Dimension>
+    <Dimension ID="18" Title="Kinematic Viscosity" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="Stk" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="CStk" Slope="100" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="2" Title="cm2/s" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="19" Title="Dynamic Viscosity" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="P" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="cP" Slope="100" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="2" Title="g/cm/s" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="20" Title="Time (ulong)" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="Count" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="s" Slope="4.8E-07" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="2" Title="ms" Slope="0.00048" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="21" Title="Number" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="[-]" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="22" Title="Timer" Metric="1" English="1">
+      <Units>
+        <Unit ID="0" Title="s" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="ms" Slope="1000" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="2" Title="µs" Slope="1000000" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+    <Dimension ID="23" Title="Resistance" Metric="0" English="0">
+      <Units>
+        <Unit ID="0" Title="Ω" Slope="1.0" Offset="0.0" UnitSystem="AllUnits" />
+        <Unit ID="1" Title="kΩ" Slope="0.001" Offset="0.0" UnitSystem="AllUnits" />
+      </Units>
+    </Dimension>
+  </Dimensions>
+  <Lists>
+    <List ID="0" Title="ITEM_FUNCTION">
+      <Elements>
+        <Element ID="0" Title="Menu" Value="0" Tag="" />
+        <Element ID="1" Title="Data" Value="1" Tag="" />
+        <Element ID="2" Title="List" Value="2" Tag="" />
+        <Element ID="3" Title="Command" Value="3" Tag="" />
+        <Element ID="4" Title="Switch" Value="4" Tag="" />
+        <Element ID="5" Title="Show name of parent item" Value="5" Tag="" />
+        <Element ID="6" Title="Show value of parent item" Value="6" Tag="" />
+        <Element ID="7" Title="Show unit of parent item" Value="7" Tag="" />
+        <Element ID="8" Title="Show value and unit of parent item" Value="8" Tag="" />
+        <Element ID="9" Title="Password" Value="9" Tag="" />
+      </Elements>
+    </List>
+    <List ID="1" Title="DATA_TYPE">
+      <Elements>
+        <Element ID="0" Title="Byte" Value="0" Tag="1" />
+        <Element ID="1" Title="Unsigned integer" Value="1" Tag="2" />
+        <Element ID="2" Title="String" Value="2" Tag="-1" />
+        <Element ID="3" Title="Float" Value="3" Tag="4" />
+        <Element ID="4" Title="Error record" Value="4" Tag="8" />
+        <Element ID="5" Title="Analogue output record" Value="5" Tag="26" />
+        <Element ID="6" Title="Reference password" Value="6" Tag="16" />
+        <Element ID="7" Title="Alarm record" Value="7" Tag="72" />
+      </Elements>
+    </List>
+    <List ID="2" Title="BIT_CONTROL">
+      <Elements>
+        <Element ID="0" Title="Disabled" Value="0" Tag="" />
+        <Element ID="1" Title="Enabled" Value="1" Tag="" />
+      </Elements>
+    </List>
+    <List ID="3" Title="ASSIGNEDTO_CUR1">
+      <Elements>
+        <Element ID="0" Title="59" Value="59" Tag="" />
+        <Element ID="1" Title="45" Value="45" Tag="" />
+        <Element ID="2" Title="58" Value="58" Tag="" />
+        <Element ID="3" Title="80" Value="80" Tag="" />
+        <Element ID="4" Title="239" Value="239" Tag="" />
+        <Element ID="5" Title="240" Value="240" Tag="" />
+        <Element ID="6" Title="90" Value="90" Tag="" />
+        <Element ID="7" Title="101" Value="101" Tag="" />
+        <Element ID="8" Title="65" Value="65" Tag="" />
+        <Element ID="9" Title="70" Value="70" Tag="" />
+        <Element ID="10" Title="71" Value="71" Tag="" />
+        <Element ID="11" Title="100" Value="100" Tag="" />
+        <Element ID="12" Title="104" Value="104" Tag="" />
+        <Element ID="13" Title="105" Value="105" Tag="" />
+        <Element ID="14" Title="108" Value="108" Tag="" />
+        <Element ID="15" Title="109" Value="109" Tag="" />
+        <Element ID="16" Title="102" Value="102" Tag="" />
+        <Element ID="17" Title="103" Value="103" Tag="" />
+        <Element ID="18" Title="55" Value="55" Tag="" />
+        <Element ID="19" Title="56" Value="56" Tag="" />
+        <Element ID="20" Title="57" Value="57" Tag="" />
+        <Element ID="21" Title="175" Value="175" Tag="" />
+        <Element ID="22" Title="172" Value="172" Tag="" />
+        <Element ID="23" Title="242" Value="242" Tag="" />
+        <Element ID="24" Title="243" Value="243" Tag="" />
+        <Element ID="25" Title="244" Value="244" Tag="" />
+        <Element ID="26" Title="245" Value="245" Tag="" />
+        <Element ID="27" Title="152" Value="152" Tag="" />
+      </Elements>
+    </List>
+    <List ID="4" Title="MENU_DENSITY">
+      <Elements>
+        <Element ID="0" Title="Hide menu" Value="0" Tag="" />
+        <Element ID="1" Title="Show, Standard density" Value="1" Tag="" />
+        <Element ID="2" Title="Show, API Gravity" Value="2" Tag="" />
+        <Element ID="3" Title="Show, Degrees Baume" Value="3" Tag="" />
+        <Element ID="4" Title="Show, Gas Volumes at Reduced Conditions" Value="4" Tag="" />
+        <Element ID="5" Title="Show, Normalised Liquid Density" Value="5" Tag="" />
+        <Element ID="6" Title="Show, Normalised Density" Value="6" Tag="" />
+        <Element ID="7" Title="Show, Net Oil Computer" Value="7" Tag="" />
+      </Elements>
+    </List>
+    <List ID="5" Title="PROTOCOLS">
+      <Elements>
+        <Element ID="0" Title="PDAQ Prove-It Protocol" Value="0" Tag="" />
+        <Element ID="1" Title="AFS MFC-III Protocol" Value="1" Tag="" />
+      </Elements>
+    </List>
+    <List ID="6" Title="START_PROVER">
+      <Elements>
+        <Element ID="0" Title="Idle" Value="0" Tag="" />
+        <Element ID="1" Title="Start Prover" Value="1" Tag="" />
+      </Elements>
+    </List>
+    <List ID="7" Title="LINE2_ITEMS">
+      <Elements>
+        <Element ID="0" Title="30" Value="30" Tag="" />
+        <Element ID="1" Title="31" Value="31" Tag="" />
+        <Element ID="2" Title="32" Value="32" Tag="" />
+        <Element ID="3" Title="33" Value="33" Tag="" />
+        <Element ID="4" Title="34" Value="34" Tag="" />
+      </Elements>
+    </List>
+    <List ID="8" Title="DISPLAY_TYPE">
+      <Elements>
+        <Element ID="0" Title="LCD_MDLS_20464 (4x20, large)" Value="0" Tag="" />
+        <Element ID="1" Title="LCD_MDLS_20433 (4x20, small)" Value="1" Tag="" />
+      </Elements>
+    </List>
+    <List ID="9" Title="UNIT_NUMBER">
+      <Elements>
+        <Element ID="0" Title="A" Value="0" Tag="" />
+        <Element ID="1" Title="B" Value="1" Tag="" />
+        <Element ID="2" Title="C" Value="2" Tag="" />
+        <Element ID="3" Title="D" Value="3" Tag="" />
+        <Element ID="4" Title="E" Value="4" Tag="" />
+        <Element ID="5" Title="F" Value="5" Tag="" />
+        <Element ID="6" Title="G" Value="6" Tag="" />
+        <Element ID="7" Title="H" Value="7" Tag="" />
+        <Element ID="8" Title="I" Value="8" Tag="" />
+        <Element ID="9" Title="J" Value="9" Tag="" />
+        <Element ID="10" Title="K" Value="10" Tag="" />
+        <Element ID="11" Title="L" Value="11" Tag="" />
+        <Element ID="12" Title="M" Value="12" Tag="" />
+        <Element ID="13" Title="N" Value="13" Tag="" />
+        <Element ID="14" Title="O" Value="14" Tag="" />
+        <Element ID="15" Title="P (Default)" Value="15" Tag="" />
+      </Elements>
+    </List>
+    <List ID="10" Title="INVERT_STATUS">
+      <Elements>
+        <Element ID="0" Title="[port2] port1] [status]" Value="0" Tag="" />
+        <Element ID="1" Title="[port2] [port1] [STATUS]" Value="1" Tag="" />
+        <Element ID="2" Title="[port2] [PORT1] [status]" Value="2" Tag="" />
+        <Element ID="3" Title="[port2] [PORT1] [STATUS]" Value="3" Tag="" />
+        <Element ID="4" Title="[PORT2] port1] [status]" Value="4" Tag="" />
+        <Element ID="5" Title="[PORT2] [port1] [STATUS]" Value="5" Tag="" />
+        <Element ID="6" Title="[PORT2] [PORT1] [status]" Value="6" Tag="" />
+        <Element ID="7" Title="[PORT2] [PORT1] [STATUS]" Value="7" Tag="" />
+      </Elements>
+    </List>
+    <List ID="11" Title="COMMAND_EXECUTE">
+      <Elements>
+        <Element ID="0" Title="Idle" Value="0" Tag="" />
+        <Element ID="1" Title="Execute" Value="1" Tag="" />
+      </Elements>
+    </List>
+    <List ID="12" Title="LAUNCH_PROVER_PULSE_MODE">
+      <Elements>
+        <Element ID="0" Title="Use timeout" Value="0" Tag="" />
+        <Element ID="1" Title="Use 2nd Prover State pulse (Stop Prover)" Value="1" Tag="" />
+      </Elements>
+    </List>
+  </Lists>
+  <Bauds Default="2">
+    <Baud ID="0" Value="1200" />
+    <Baud ID="1" Value="4800" />
+    <Baud ID="2" Value="9600" />
+    <Baud ID="3" Value="19200" />
+    <Baud ID="4" Value="38400" />
+  </Bauds>
+  <Functions>
+    <Function ID="0" Name="WSD9FmdPdaq.WSD9FunctionRemoteDisplay" />
+    <Function ID="1" Name="WSD9FmdPdaq.WSD9FunctionProver" />
+  </Functions>
+  <DataTypes>
+    <DataType ID="0" Type="byte">
+      <Fields>
+        <Field ID="0" Type="byte" />
+      </Fields>
+    </DataType>
+    <DataType ID="1" Type="uint">
+      <Fields>
+        <Field ID="0" Type="uint" />
+      </Fields>
+    </DataType>
+    <DataType ID="2" Type="string">
+      <Fields>
+        <Field ID="0" Type="string" />
+      </Fields>
+    </DataType>
+    <DataType ID="3" Type="float">
+      <Fields>
+        <Field ID="0" Type="float" />
+      </Fields>
+    </DataType>
+    <DataType ID="4" Type="ulong">
+      <Fields>
+        <Field ID="0" Type="ulong" />
+      </Fields>
+    </DataType>
+    <DataType ID="5" Type="record">
+      <Fields>
+        <Field ID="0" Type="record" />
+      </Fields>
+    </DataType>
+  </DataTypes>
+  <ItemFunctions>
+    <ItemFunction ID="0" Function="Menu" Description="Menu item" />
+    <ItemFunction ID="1" Function="Data" Description="Data item" />
+    <ItemFunction ID="2" Function="List" Description="List item" />
+    <ItemFunction ID="3" Function="Command" Description="Command" />
+    <ItemFunction ID="4" Function="Swtich" Description="Two state switch" />
+    <ItemFunction ID="5" Function="ParentName" Description="Name of parent item" />
+    <ItemFunction ID="6" Function="ParentValue" Description="Value of parent item" />
+    <ItemFunction ID="7" Function="ParentUnit" Description="Unit of parent item" />
+    <ItemFunction ID="8" Function="ParentValueAndUnit" Description="Value and unit of parent item" />
+    <ItemFunction ID="9" Function="Password" Description="Password" />
+  </ItemFunctions>
+</Transmitter>
