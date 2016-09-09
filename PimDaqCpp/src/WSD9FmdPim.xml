@@ -1216,4 +1216,8 @@
     <ItemFunction ID="8" Function="ParentValueAndUnit" Description="Value and unit of parent item" />
     <ItemFunction ID="9" Function="Password" Description="Password" />
   </ItemFunctions>
+<<<<<<< HEAD
 </Transmitter>
+=======
+</Transmitter>
+>>>>>>> 6e43b0565dd6a943a0b9f3cc99ea397550292ee7
